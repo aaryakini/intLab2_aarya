@@ -12,13 +12,10 @@
 }
 
 img{
-	width: 800px;
+	width: 1000px;
 	height: auto;
 	pad
 }
-
-
-
 
 #Group17:hover {
 	cursor: url('assets/cursor.png'), auto;
