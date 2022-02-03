@@ -1,0 +1,26 @@
+.booking{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+svg{
+	width: 1300px;
+	height: auto;
+}
+
+#Group17:hover {
+	cursor: url('assets/cursor.png'), auto;
+}
+
+#Group17:hover #Rectangle9_2{
+	fill: #003166;
+	fill-opacity: 1;
+}
+
+#Group17:hover #BOOKTRIP{
+	fill: white;
+}

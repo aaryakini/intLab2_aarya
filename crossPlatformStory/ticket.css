@@ -1,0 +1,34 @@
+.container{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.ticket{
+	margin-bottom: 20px;
+}
+
+img{
+	width: 800px;
+	height: auto;
+	pad
+}
+
+
+
+
+#Group17:hover {
+	cursor: url('assets/cursor.png'), auto;
+}
+
+#Group17:hover #Rectangle9{
+	fill: #003166;
+	fill-opacity: 1;
+}
+
+#Group17:hover #go{
+	fill: white;
+}
