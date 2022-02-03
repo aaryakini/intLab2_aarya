@@ -1,0 +1,18 @@
+.chatbox{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+svg{
+	width: 400px;
+	height: auto;
+}
+
+#Rectangle4:hover {
+	fill: #ffba01;
+	cursor: url('assets/cursor.png'), auto;
+}
