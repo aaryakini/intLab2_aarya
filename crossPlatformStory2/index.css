@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
 
 body{
-	/*background-image: url("assets/bg.jpeg");*/
-	background: black;
+	background-image: url("assets/bg.jpeg");
+	/*background: black;*/
 	font-family: 'Cormorant Garamond', serif;
 	color: white;
 	font-size: 60px;
@@ -33,12 +33,12 @@ body{
 
 .text1:hover{
 	text-align: left;
-	filter: blur(1px);
+	filter: blur(0.5px);
 }
 
 .text2:hover{
 	text-align: right;
-	filter: blur(1px);
+	filter: blur(0.5px);
 }
 
 a{
@@ -47,7 +47,7 @@ a{
 }
 
 a:hover{
-	color: magenta;
+	color: #e3242b;
 }
 
 .small{
