@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.body{
+	background: pink;
+	box-sizing: border-box;
+}
+
+.text{
+	padding: 40px;
+	font-family: 'Playfair Display', serif;
+	font-size: 100px;
+	color: #f73772;
+}
+
+a{
+	text-decoration: none;
+	color: #f73772;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: blue;
+}
