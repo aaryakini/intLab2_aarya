@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Editorial New';
+    src: url('../fonts/editorialNew/editorialNew.woff2') format('woff2'),
+         url('../fonts/editorialNew/editorialNew.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	background-color: white;
+	overflow: hidden;
+}
+
+.container{
+	display: flex;
+	flex-flow: column wrap;
+	width: 100vw;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+#bg{
+	position: absolute;
+	width: 100vw;
+	height: 100vw;
+	z-index: -1;
+	background: white;
+}
+
+.text{
+	position: relative;
+	color: black;
+	font-family: 'Editorial New', serif;
+	letter-spacing: 3px;
+	font-size: 90px;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 2;
+	margin-bottom: -25px;
+}
+
+.fog{
+	margin-bottom: 100px;
+}
+
+.fog:hover{
+	color: white;
+	animation: fog 5s linear infinite;	
+	cursor: pointer;
+}
+
+.fog:hover + #bg{
+	background: black;
+}
+
+@keyframes fog{
+	0%{
+		text-shadow: none;
+	}
+
+	10%{
+		text-shadow: 0 0 10px #fff,
+	                 0 0 20px #fff;
+	}
+
+	25%{
+		text-shadow: 0 0 10px #fff,
+	                 0 0 20px #fff, 
+	                 0 0 40px #fff,
+	                 0 0 60px #fff,
+	                 0 0 80px #fff;
+	}
+
+	50%{
+		text-shadow: 0 0 10px #fff,
+	                 0 0 20px #fff, 
+	                 0 0 40px #fff,
+	                 0 0 60px #fff,
+	                 0 0 80px #fff,
+	                 0 0 100px #fff,
+	                 0 0 120px #fff,
+	                 0 0 140px #fff,
+	                 0 0 160px #fff,
+	                 0 0 180px #fff;
+	}
+
+	75%{
+		text-shadow: 0 0 10px #fff,
+	                 0 0 20px #fff, 
+	                 0 0 40px #fff,
+	                 0 0 60px #fff,
+	                 0 0 80px #fff;
+	}
+
+	90%{
+		text-shadow: 0 0 10px #fff,
+	                 0 0 20px #fff;
+	}
+
+	100%{
+		text-shadow: none;
+	}
+}
