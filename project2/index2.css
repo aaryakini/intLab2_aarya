@@ -72,6 +72,10 @@ body{
 	border: solid black 0.5px;
 }
 
+.display{
+	display: none;
+}
+
 img{
 	padding: 15px;
 	width: 210px;
@@ -92,19 +96,12 @@ img{
 	font-size: 18px;
 	color: blue;
 	text-decoration: underline;
-	padding: none;
+	position: relative;
+	display: inline-block;
 }
 
 .tooltiptext:hover{
 	font-style: italic;
-}
-
-#liddell{
-	display: none;
-}
-
-#montauban{
-	display: none;
 }
 
 /*Clearing Styling of Button*/
