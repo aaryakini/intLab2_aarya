@@ -1,0 +1,23 @@
+body{
+	background-color: yellowgreen;
+}
+
+.text{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial;
+	font-size: 50px;
+}
+
+.lang {
+	margin: 100px;
+}
+
+.one{
+	background-color: beige;
+}
+.two{
+	background-color: white;
+}

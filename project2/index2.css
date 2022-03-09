@@ -33,7 +33,7 @@ body{
 	border-top: solid black 0.5px;
 	padding-top: 25px;
 	height: 800px;
-	width: 5690px;
+	width: auto;
 	column-count: auto;
 	column-width: 300px;
 	column-gap: 30px;
