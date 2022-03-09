@@ -44,12 +44,12 @@ body{
 .para{
 	margin-top: 0px;
 	margin-bottom: 0px;
-	text-indent: 40px;
+	/*text-indent: 40px;*/
 }
 
-.none{
+/*.none{
 	text-indent: 0px;
-}
+}*/
 
 .tooltip{
 	display: inline-block;
@@ -62,7 +62,6 @@ body{
 }
 
 .tooltipframe{
-	text-indent: 0px;
 	position: absolute;
 	display: flex;
 	flex-flow: column wrap;
@@ -78,7 +77,6 @@ body{
 }
 
 img{
-	text-indent: none;
 	padding: 15px;
 	width: 210px;
 	height: auto;
@@ -86,7 +84,6 @@ img{
 }
 
 .desc{
-	text-indent: 0px;
 	font-family: 'Space Grotesk', monospace;
 	font-size: 12px;
 	padding-left: 15px;
@@ -95,7 +92,6 @@ img{
 }
 
 .tooltiptext{
-	text-indent: -40px;
 	font-family: 'Times New Roman';
 	font-size: 18px;
 	color: blue;
