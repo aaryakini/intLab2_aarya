@@ -147,10 +147,14 @@ button, input[type="submit"], input[type="reset"] {
     	}
 	    .content{
 	    	height: 75vh;
-	    	font-size: 14px;
+	    	font-size: 10px;
 	    }
 	    .tooltiptext{
 	    	font-size: 14px;
+	    }
+
+	    .tooltipframe{
+	    	z-index: 20;
 	    }
     }
 
@@ -170,6 +174,7 @@ button, input[type="submit"], input[type="reset"] {
 	    	height: 85vh;
 	    	font-size: 20px;
 	    }
+
 	    .tooltiptext{
 	    	font-size: 20px;
 	    }
