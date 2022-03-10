@@ -138,6 +138,7 @@ button, input[type="submit"], input[type="reset"] {
     and (min-device-width : 320px) 
     and (max-device-width : 480px) {
     	body{
+    		zoom: 120%;
     		overflow-y: hidden;
     		height: 100vh;
     	}
@@ -160,6 +161,9 @@ button, input[type="submit"], input[type="reset"] {
     	body{
     		overflow-y: hidden;
     		height: 100vh;
+    	}
+    	#heading{
+    		font-size: 40px;
     	}
 	    .content{
 	    	width: 100%;
