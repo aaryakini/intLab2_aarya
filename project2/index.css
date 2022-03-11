@@ -59,12 +59,7 @@ body{
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-right: 35px;
-	/*text-indent: 40px;*/
 }
-
-/*.none{
-	text-indent: 0px;
-}*/
 
 .tooltip{
 	display: inline-block;
