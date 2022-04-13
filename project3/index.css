@@ -21,3 +21,325 @@
     font-weight: normal;
     font-style: Italic;
 }
+
+body{
+    overflow-x: hidden;
+    /*background-color: yellowgreen;*/
+}
+
+#container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    filter: none;
+}
+
+.header{
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.scroll {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 50px;
+  margin: auto;
+  background-color: #FFB82E;
+  overflow: hidden;
+  z-index: 1;
+  box-sizing: border-box;
+  border-bottom: solid black 4px;
+}
+
+.scrollTitle {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    transition: all 1s ease;
+}
+
+.scrollTitle > .pause {
+    display: flex;
+    animation: scrollText 25s infinite linear;
+}
+
+.pause p {
+    font-family: Agrandir;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    margin: 0;
+    font-size: 15px;
+    transition: all 2s ease;
+}
+
+.pause:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.sort{
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.sortButton{
+    text-align: center;
+    flex-grow: 4;
+    padding: 20px;
+    border-right: solid black 2px;
+    border-left: solid black 2px;
+    border-bottom: solid black 4px;
+}
+
+.sortButton:hover {
+    background-color: #FF00B8;
+    cursor: pointer;
+}
+
+.sortButton:hover button{
+    color: white;
+}
+
+
+.sort button{
+    font-family: Agrandir, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/*Clearing Styling of Button*/
+/*Stack Overflow Source — https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit*/
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: inherit;
+    outline: inherit;
+}
+/*****************************/
+
+.content{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: none;
+    background-color: yellowgreen;
+}
+
+.banner{
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    font-family: Agrandir;
+    font-size: 65px;
+    text-transform: uppercase;
+    line-height: 0px;
+    text-align: center;
+    border-right: solid black 4px;
+    background-color: white;
+}
+
+.banner:hover{
+    color: white;
+    background-color: #FF00B8;
+}
+
+.allBooks{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    margin: 20px;
+    justify-content: center;
+}
+
+.book{
+    background-color: white;
+    width: 340px;
+    display: flex;
+    flex-flow: column wrap;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: Agrandir, Helvetica, sans-serif;
+    box-sizing: border-box;
+    border: solid black 3px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+.bookCover{
+    width: 290px;
+    align-self: center;
+    margin-bottom: 5px;
+}
+
+.actions{
+    width: fit-content;
+    /*background-color: yellowgreen;*/
+    /*justify-self: flex-start;*/
+
+}
+
+.actions svg{
+    /*background-color: pink;*/
+    padding-top: 10px;
+    padding-right: 10px;
+    width: 30px;
+}
+
+.bg{
+    fill: white;
+}
+
+#download:hover .bg{
+   fill: #FF00B8;
+}
+
+#download:hover .cls-3{
+   stroke: white;
+}
+
+#download:hover .cls-2{
+   stroke: white;
+}
+
+#like:hover .bg{
+   fill: #FF00B8;
+}
+
+#like:hover #heart{
+   fill: white;
+}
+
+.line{
+    margin-bottom: 15px;
+}
+
+.text{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-top: 2px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: -12px;
+}
+
+span{
+    font-weight: regular;
+}
+
+/*.menu{
+    position: fixed;
+    right: 0px;
+    bottom: 30px;
+    align-self: flex-end;
+    z-index: 100;
+    width: fit-content;
+}*/
+
+/* Dropdown Button */
+.dropbtn {
+    cursor: pointer;
+    filter: unset;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  filter: drop-shadow(0px 0px 20px #FF00B8);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: fixed;
+    right: 0px;
+    bottom: 30px;
+    align-self: flex-end;
+    z-index: 10;
+    width: fit-content;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  bottom: 150px;
+  right: 46px;
+  z-index: 10;
+  width: 350px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    font-family: Agrandir, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #FFB82E;
+    color: black;
+    width: fit-content;
+    float: right;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    border: solid black 4px;
+    /*box-shadow: 0px 0px 20px 0px #FF00B8;*/
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: white;
+    background-color: #FF00B8;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}
+
+
+
+
+
+
+
