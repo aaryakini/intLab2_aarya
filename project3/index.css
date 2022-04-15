@@ -175,7 +175,7 @@ button, input[type="submit"], input[type="reset"] {
     background-color: #FF00B8;
 }
 
-.allBooks{
+#allBooks{
     width: 90%;
     display: flex;
     flex-flow: row wrap;
