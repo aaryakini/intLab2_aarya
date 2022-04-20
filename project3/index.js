@@ -1,7 +1,7 @@
 let apiUrl = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM";
-let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrAziJUDbuBHR9TA/recJ4SeyquPLtgw0r";
-let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr6djAxCcGhrt7WT/recJ4SeyquPLtgw0r";
-let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr6djAxCcGhrt7WT/recc6Md7EcWFnUaY5";
+let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr2fiq3WjpoDh2xy/recJ4SeyquPLtgw0r";
+let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr2fiq3WjpoDh2xy/recc6Md7EcWFnUaY5";
+let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr2fiq3WjpoDh2xy/recvoonhgAeyLL0pc";
 
 //variable that stories all the data fromt eh API
 
@@ -67,76 +67,34 @@ async function main(){
 		allCounter++;
 	}
 
+	let genCount = 0;
+
 	console.log(all);
 
-	// for (let i = 0; i < all.length; i++){
-	// 	let name = all[i].fields.bookName;
-	// 	let heading = document.createElement("h1");
-	// 	heading.innerHTML = name;
-	// 	document.body.appendChild(heading);
-	// }
-
 	for(let i = 0; i < all.length; i++){
-		
-		// let book = all[i];
-		// book.className = "book";
-		// document.getElementsByClassName("allBooks")[0].appendChild(book);
 
-		// let bookName = all[i].fields.bookName;
-		// let bookNameText = document.createElement("book");
-		// bookNameText.class = "book";
-		// bookNameText.innerHTML = bookName;
-		// document.body.appendChild(bookNameText);
-		// document.getElementsByClassName("allBooks")[i].appendChild("bookName");
+		let template = document.getElementsByClassName("book")[0];
+		let container = document.getElementById("allBooks");
 
-		// let name = all[i].fields.bookName;
-		// let heading = document.createElement("h1");
-		// heading.innerHTML = name;
-		// document.body.appendChild(heading);
+		let templateCopy = template.cloneNode(true);
+		console.log(templateCopy);
+		genCount++;
+		console.log(genCount);
+		container.appendChild(templateCopy);
 
-		// let book = all[i];
-		// const bookContainer = document.createElement("div");
-		// // bookContainer.innerHTML = ;
-		// document.appendChild("bookContainer");
-
-		// let bookCover = all[i].fields.bookCover;
-		// let cover = document.createElement("img");
-		// cover.class = "bookCover";
-		// cover.innerHTML = bookCover;
-		// document.body.appendChild(cover);
-
-		// let bookName = all[i].fields.bookName;
-		// let heading = document.createElement("");
-		// heading.innerHTML = name;
-		// document.body.appendChild(heading);
-
-		// const para = document.createElement("div");
-		// para.class = "div1";
-		// const element = document.getElementsByClassName("div1")[0];
-		// element.appendChild(para);
-
-
-		const book = document.createElement('div');
-		book.class = "book";
-		const element = document.getElementsByClassName("allBooks")[0];
-		element.appendChild(book);
-
-		let bookCover = all[i].fields.bookCover;
-		let cover = document.createElement('IMG');
-		cover.class = "bookCover";
-		cover.innerHTML = bookCover;
-		const element1 = document.getElementsByClassName("book")[i];
-		element1.appendChild(cover);
-
-
-
-
-
-
-
+		// templateCopy.querySelector(".bookCover").src = all[i].fields.
+		templateCopy.querySelector(".title").append(all[i].fields.bookName);
+		templateCopy.querySelector(".type").append(all[i].fields.type);
+		templateCopy.querySelector(".author").append(all[i].fields.author);
+		templateCopy.querySelector(".yearPublished").append(all[i].fields.yearPublished);
+		templateCopy.querySelector(".country").append(all[i].fields.country);
+		templateCopy.querySelector(".yearBanned").append(all[i].fields.yearBanned);
+		templateCopy.querySelector(".yearUnbanned").append(all[i].fields.yearUnbanned);
+		templateCopy.querySelector(".reason").append(all[i].fields.reason);
 	}
 	
 }
+
 
 main();
 

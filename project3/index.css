@@ -188,7 +188,7 @@ button, input[type="submit"], input[type="reset"] {
     background-color: white;
     width: 340px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     box-sizing: border-box;
     padding: 20px;
     font-family: Agrandir, Helvetica, sans-serif;
@@ -262,6 +262,7 @@ button, input[type="submit"], input[type="reset"] {
     text-transform: uppercase;
     font-size: 30px;
     margin-bottom: -12px;
+    line-height: 32px;
 }
 
 span{
@@ -337,9 +338,6 @@ span{
     display:block;
 }
 
-
-
-
-
-
-
+.template{
+    display: hidden;
+}
