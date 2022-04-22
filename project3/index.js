@@ -1,7 +1,7 @@
 let apiUrl = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM";
-let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr2fiq3WjpoDh2xy/recJ4SeyquPLtgw0r";
-let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr2fiq3WjpoDh2xy/recc6Md7EcWFnUaY5";
-let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr2fiq3WjpoDh2xy/recvoonhgAeyLL0pc";
+let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr6ymQf6TrXkWAKJ/recJ4SeyquPLtgw0r";
+let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr6ymQf6TrXkWAKJ/recc6Md7EcWFnUaY5";
+let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr6ymQf6TrXkWAKJ/recvoonhgAeyLL0pc";
 
 //variable that stories all the data fromt eh API
 
@@ -82,7 +82,7 @@ async function main(){
 		console.log(genCount);
 		container.appendChild(templateCopy);
 
-		// templateCopy.querySelector(".bookCover").src = all[i].fields.
+		templateCopy.querySelector(".bookCover").src = all[i].fields.bookCover[0].url;
 		templateCopy.querySelector(".title").append(all[i].fields.bookName);
 		templateCopy.querySelector(".type").append(all[i].fields.type);
 		templateCopy.querySelector(".author").append(all[i].fields.author);
