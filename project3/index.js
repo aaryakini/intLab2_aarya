@@ -1,7 +1,7 @@
 let apiUrl = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM";
-let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr6ymQf6TrXkWAKJ/recJ4SeyquPLtgw0r";
-let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr6ymQf6TrXkWAKJ/recc6Md7EcWFnUaY5";
-let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itr6ymQf6TrXkWAKJ/recvoonhgAeyLL0pc";
+let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itriHo2kOoOgtYr53/recJ4SeyquPLtgw0r";
+let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itriHo2kOoOgtYr53/recc6Md7EcWFnUaY5";
+let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itriHo2kOoOgtYr53/recvoonhgAeyLL0pc";
 
 //variable that stories all the data fromt eh API
 

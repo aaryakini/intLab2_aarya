@@ -23,7 +23,7 @@
 }
 
 body{
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     /*background-color: yellowgreen;*/
 }
 
@@ -37,12 +37,12 @@ body{
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
-    background-color: white;
+    background-color: yellowgreen;
     filter: none;
 }
 
 .header{
-    position: sticky;
+    position: fixed;
     top: 0px;
     z-index: 2;
 }
@@ -63,8 +63,8 @@ body{
 .scrollTitle {
     display: flex;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
@@ -149,12 +149,14 @@ button, input[type="submit"], input[type="reset"] {
 .content{
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     margin: none;
     background-color: yellowgreen;
 }
 
 .banner{
-    flex: 1 1 auto;
+    width: 120px;
+    /*flex: 1 1 auto;*/
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -175,20 +177,34 @@ button, input[type="submit"], input[type="reset"] {
     background-color: #FF00B8;
 }
 
+.banner p{
+    position: fixed;
+    top: 130px;
+    left: -1px;
+}
+
 #allBooks{
-    width: 90%;
-    display: flex;
-    flex-flow: row wrap;
+    position: relative;
+    top: 115px;
+    left: 85px;
     box-sizing: border-box;
+    padding: 10px;
+    width: 80%;
     margin: 20px;
-    justify-content: center;
+    height: 65500px;
+    display: flex;
+    flex-flow: column wrap; /* Shorthand – you could use ‘flex-direction: column’ and ‘flex-wrap: wrap’ instead */
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
 }
 
 .book{
     background-color: white;
     width: 340px;
-    display: flex;
-    flex-flow: row wrap;
+    /*display: flex;
+    flex-flow: row wrap;*/
     box-sizing: border-box;
     padding: 20px;
     font-family: Agrandir, Helvetica, sans-serif;
