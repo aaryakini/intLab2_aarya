@@ -36,9 +36,10 @@ body{
     position: absolute;
     justify-content: space-between;
     width: 100vw;
-    height: 100vh;
+    height: 65650px;
     background-color: yellowgreen;
     filter: none;
+    /*padding-bottom: 200px;*/
 }
 
 .header{
@@ -158,13 +159,14 @@ button, input[type="submit"], input[type="reset"] {
     width: 120px;
     /*flex: 1 1 auto;*/
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    white-space:nowrap;
     align-items: center;
     justify-content: center;
     writing-mode: vertical-rl;
     text-orientation: sideways;
     font-family: Agrandir;
-    font-size: 65px;
+    font-size: 63px;
     text-transform: uppercase;
     line-height: 0px;
     text-align: center;
@@ -179,7 +181,7 @@ button, input[type="submit"], input[type="reset"] {
 
 .banner p{
     position: fixed;
-    top: 130px;
+    top: 142px;
     left: -1px;
 }
 
@@ -352,8 +354,4 @@ span{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display:block;
-}
-
-.template{
-    display: hidden;
 }

@@ -1,7 +1,7 @@
 let apiUrl = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM";
-let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itriHo2kOoOgtYr53/recJ4SeyquPLtgw0r";
-let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itriHo2kOoOgtYr53/recc6Md7EcWFnUaY5";
-let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itriHo2kOoOgtYr53/recvoonhgAeyLL0pc";
+let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrWkjv5YUWlknl4i/recJ4SeyquPLtgw0r";
+let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrWkjv5YUWlknl4i/recc6Md7EcWFnUaY5";
+let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrWkjv5YUWlknl4i/recvoonhgAeyLL0pc";
 
 //variable that stories all the data fromt eh API
 
@@ -67,31 +67,9 @@ async function main(){
 		allCounter++;
 	}
 
-	let genCount = 0;
+	// console.log(all);
 
-	console.log(all);
-
-	for(let i = 0; i < all.length; i++){
-
-		let template = document.getElementsByClassName("book")[0];
-		let container = document.getElementById("allBooks");
-
-		let templateCopy = template.cloneNode(true);
-		console.log(templateCopy);
-		genCount++;
-		console.log(genCount);
-		container.appendChild(templateCopy);
-
-		templateCopy.querySelector(".bookCover").src = all[i].fields.bookCover[0].url;
-		templateCopy.querySelector(".title").append(all[i].fields.bookName);
-		templateCopy.querySelector(".type").append(all[i].fields.type);
-		templateCopy.querySelector(".author").append(all[i].fields.author);
-		templateCopy.querySelector(".yearPublished").append(all[i].fields.yearPublished);
-		templateCopy.querySelector(".country").append(all[i].fields.country);
-		templateCopy.querySelector(".yearBanned").append(all[i].fields.yearBanned);
-		templateCopy.querySelector(".yearUnbanned").append(all[i].fields.yearUnbanned);
-		templateCopy.querySelector(".reason").append(all[i].fields.reason);
-	}
+	display();
 	
 }
 
@@ -137,4 +115,55 @@ window.onclick = function(event) {
       }
     }
   }
+}
+
+
+function sortByCountry(){
+	
+}
+
+
+function display(){
+	let genCount = 0;
+	for(let i = 0; i < all.length; i++){
+
+		let template = document.getElementsByClassName("book")[0];
+		let container = document.getElementById("allBooks");
+
+		let templateCopy = template.cloneNode(true);
+		console.log(templateCopy);
+		genCount++;
+		console.log(genCount);
+		container.appendChild(templateCopy);
+
+		templateCopy.querySelector(".bookCover").src = all[i].fields.bookCover[0].url;
+		templateCopy.querySelector(".title").append(all[i].fields.bookName);
+		templateCopy.querySelector(".type").append(all[i].fields.type);
+		templateCopy.querySelector(".author").append(all[i].fields.author);
+		
+		if (all[i].fields.yearPublished === 0){
+			templateCopy.querySelector(".yearPublished").append("Unknown");
+		}
+		else{
+			templateCopy.querySelector(".yearPublished").append(all[i].fields.yearPublished);
+		}
+
+		templateCopy.querySelector(".country").append(all[i].fields.country);
+
+		if (all[i].fields.yearBanned === 0){
+			templateCopy.querySelector(".yearBanned").append("Unknown");
+		}
+		else{
+			templateCopy.querySelector(".yearBanned").append(all[i].fields.yearBanned);
+		}
+
+		if (all[i].fields.yearUnbanned === 0){
+			templateCopy.querySelector(".yearUnbanned").append("Unknown");
+		}
+		else{
+			templateCopy.querySelector(".yearUnbanned").append(all[i].fields.yearUnbanned);
+		}
+
+		templateCopy.querySelector(".reason").append(all[i].fields.reason);
+	}
 }
