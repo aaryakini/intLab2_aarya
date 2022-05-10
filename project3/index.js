@@ -1,7 +1,7 @@
 let apiUrl = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM";
-let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrWkjv5YUWlknl4i/recJ4SeyquPLtgw0r";
-let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrWkjv5YUWlknl4i/recc6Md7EcWFnUaY5";
-let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrWkjv5YUWlknl4i/recvoonhgAeyLL0pc";
+let apiUrl2 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrhtUZ4N5BkDUCrK/recJ4SeyquPLtgw0r";
+let apiUrl3 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrhtUZ4N5BkDUCrK/recc6Md7EcWFnUaY5";
+let apiUrl4 = "https://api.airtable.com/v0/appASGTpH03mZqCL4/Sheet1?api_key=keygMwV8LzfK46eyM&offset=itrhtUZ4N5BkDUCrK/recvoonhgAeyLL0pc";
 
 //variable that stories all the data fromt eh API
 
@@ -70,6 +70,9 @@ async function main(){
 	// console.log(all);
 
 	display();
+
+	let hide = document.getElementsByClassName("book")[0];
+	hide.classList.add("hide");
 	
 }
 
@@ -118,11 +121,6 @@ window.onclick = function(event) {
 }
 
 
-function sortByCountry(){
-	
-}
-
-
 function display(){
 	let genCount = 0;
 	for(let i = 0; i < all.length; i++){
@@ -131,9 +129,9 @@ function display(){
 		let container = document.getElementById("allBooks");
 
 		let templateCopy = template.cloneNode(true);
-		console.log(templateCopy);
-		genCount++;
-		console.log(genCount);
+		// console.log(templateCopy);
+		// genCount++;
+		// console.log(genCount);
 		container.appendChild(templateCopy);
 
 		templateCopy.querySelector(".bookCover").src = all[i].fields.bookCover[0].url;

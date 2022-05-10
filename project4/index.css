@@ -1,0 +1,52 @@
+body{
+	overflow: hidden;
+	background-color: greenyellow;
+}
+
+.container{
+	height: 100vh;
+	display: flex;
+	flex flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.header{
+	width: 600px;
+	height: 400px;
+	background-color: white;
+	text-align: center;
+	border-radius: 60px;
+	font-family: Arial;
+	font-size: 20px;
+	box-sizing: border-box;
+	align-items: center;
+	padding: 30px;
+	border: 4px solid black;
+}
+
+.highlight{
+	background-color: greenyellow;
+}
+
+#title{
+	font-size: 40px;
+	margin-bottom: 0px;
+	font-weight: bolder;
+}
+
+
+
+button{
+	font-family: Arial;
+	font-size: 25px;
+	width: fit-content;
+	box-sizing: border-box;
+	padding: 15px;
+	border-radius: 20px;
+	filter: drop-shadow(2px 2px);
+}
+
+button:hover{
+	background-color: greenyellow;
+}
