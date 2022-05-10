@@ -1,6 +1,7 @@
 body{
 	overflow: hidden;
 	background-color: greenyellow;
+	cursor: url('cursor.png'), auto;	
 }
 
 .container{
